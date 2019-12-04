@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"math"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	bs, err := ioutil.ReadFile("input")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	str := string(bs)
+	lines := strings.Fields(str)
+	total := 0
+
+	for _, val := range lines {
+		x, _ := strconv.Atoi(val)
+		xdiv3 := x / 3
+		xdiv3float := float64(xdiv3)
+		xdown := math.Floor(xdiv3float)
+		finalval := int(xdown) - 2
+		total += finalval
+	}
+
+	fmt.Println(total)
+}
