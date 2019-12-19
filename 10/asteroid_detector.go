@@ -1,5 +1,8 @@
 package main
 
+// a lot of help came from reading rbusquet's code
+// https://github.com/rbusquet/advent-of-code/tree/d907cb218f22b6b35f7d5ae4b8da020fba516f16/2019
+
 import (
 	"fmt"
 	"io/ioutil"
